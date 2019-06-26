@@ -1,0 +1,6 @@
+<h1> All Climbers </h1>
+<ul>
+    <% @climbers.each do |c| %>
+        <li><%= link_to(c.name, "/climbers/#{c.id}") %></li>
+    <% end %>
+</ul>

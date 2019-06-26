@@ -1,0 +1,11 @@
+<h1> <%= @mountain.name %> </h1>
+<ul> 
+    <li> <%= @mountain.height.to_s + " " + "ft" %> </li>
+    <li> <%= @mountain.location %> </li>
+    <li> Climbers </li>
+    <ul> 
+        <% @mountain.climbers.each do |c| %>
+            <li> <%= c.name %> </li>
+        <% end %>
+    </ul>
+</ul>

@@ -1,0 +1,1691 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateMountains (20190626174045)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "height" integer, "location" varchar)[0m
+  ↳ db/migrate/20190626174045_create_mountains.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190626174045"]]
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateClimbers (20190626174055)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "climbers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "country" varchar, "mountain_id" integer)[0m
+  ↳ db/migrate/20190626174055_create_climbers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190626174055"]]
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-26 17:43:33.296399"], ["updated_at", "2019-06-26 17:43:33.296399"]]
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mClimber Load (0.7ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ekowbuadu/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMountain Create (0.8ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height", "location") VALUES (?, ?, ?)[0m  [["name", "Mt. Everest"], ["height", 29000], ["location", "China"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mMountain Create (0.4ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height", "location") VALUES (?, ?, ?)[0m  [["name", "Mt. Mountain"], ["height", 5000], ["location", "Canada"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMountain Create (0.4ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height", "location") VALUES (?, ?, ?)[0m  [["name", "Mt. TallGuy"], ["height", 10000], ["location", "Sweden"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mMountain Create (0.3ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height", "location") VALUES (?, ?, ?)[0m  [["name", "Mt. Vesuvius"], ["height", 8000], ["location", "Pompeii"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/mountains" for ::1 at 2019-06-26 14:21:22 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ekowbuadu/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:3
+  Rendered mountains/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 404ms (Views: 389.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/mountains/1" for ::1 at 2019-06-26 14:21:24 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.5ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 1]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 94ms (Views: 83.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/mountains/2" for ::1 at 2019-06-26 14:21:29 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMountain Load (1.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 2]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/mountains/3" for ::1 at 2019-06-26 14:21:32 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 3]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/4" for ::1 at 2019-06-26 14:21:35 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 4]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/4" for ::1 at 2019-06-26 14:22:09 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (15.3ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (String can't be coerced into Integer):
+    1: <h1> <%= @mountain.name %> </h1>
+    2: <ul> 
+    3:     <li> <%= @mountain.height + "ft" %> </li>
+    4:     <li> <%= @mountain.location %> </li>
+    5:     <li> Climbers </li>
+    6:     <ul> 
+  
+app/views/mountains/show.html.erb:3:in `+'
+app/views/mountains/show.html.erb:3:in `_app_views_mountains_show_html_erb___4327486115878292067_70116684321620'
+app/controllers/mountains_controller.rb:10:in `show'
+Started GET "/mountains/4" for ::1 at 2019-06-26 14:22:45 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (String can't be coerced into Integer):
+    1: <h1> <%= @mountain.name %> </h1>
+    2: <ul> 
+    3:     <li> <%= @mountain.height + "ft" %> </li>
+    4:     <li> <%= @mountain.location %> </li>
+    5:     <li> Climbers </li>
+    6:     <ul> 
+  
+app/views/mountains/show.html.erb:3:in `+'
+app/views/mountains/show.html.erb:3:in `_app_views_mountains_show_html_erb___4327486115878292067_70116680733100'
+app/controllers/mountains_controller.rb:10:in `show'
+Started GET "/mountains/4" for ::1 at 2019-06-26 14:22:49 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 4]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/4" for ::1 at 2019-06-26 14:23:06 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 4]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 14:23:20 -0400
+Processing by ClimbersController#index as HTML
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `climber' for #<ClimbersController:0x00007f8a9c4f5550>
+Did you mean?  climber_url):
+  
+app/controllers/climbers_controller.rb:4:in `index'
+Started GET "/climbers" for ::1 at 2019-06-26 14:23:31 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.5ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:34:14 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1> New Climber </h1>
+    2: <%= form_for @climber do |c| %>
+    3:     <%= c.text_field :name %>
+    4:     <%= c.text_field :age %>
+    5:     <%= c.text_field :country %>
+  
+app/views/climbers/new.html.erb:2:in `_app_views_climbers_new_html_erb__798975316069990901_70116680136620'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:35:25 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 42ms (Views: 34.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:36:59 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:38:12 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ekowbuadu/Hikes/app/views/climbers/new.html.erb:12: syntax error, unexpected ')', expecting end
+...ins, :id, :name_with_initial) );@output_buffer.safe_append='
+...                              ^
+/Users/ekowbuadu/Hikes/app/views/climbers/new.html.erb:16: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/climbers/new.html.erb:12: syntax error, unexpected ')', expecting end
+app/views/climbers/new.html.erb:16: syntax error, unexpected ensure, expecting end-of-input
+app/controllers/climbers_controller.rb:15:in `new'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:38:21 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (233.2ms)
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `collection_check_box' for #<ActionView::Helpers::FormBuilder:0x00007f8a9c6ac718>
+Did you mean?  collection_check_boxes):
+     9:     <br>
+    10:     Country: <%= c.text_field :country %>
+    11:     </br>
+    12:     <%= c.collection_check_box :mountain_ids, @mountains, :id, :name_with_initial %>
+    13:     <%= c.submit %>
+    14: <% end %>
+  
+app/views/climbers/new.html.erb:12:in `block in _app_views_climbers_new_html_erb__798975316069990901_70116653167080'
+app/views/climbers/new.html.erb:2:in `_app_views_climbers_new_html_erb__798975316069990901_70116653167080'
+app/controllers/climbers_controller.rb:15:in `new'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:38:29 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+     9:     <br>
+    10:     Country: <%= c.text_field :country %>
+    11:     </br>
+    12:     <%= c.collection_check_boxes :mountain_ids, @mountains, :id, :name_with_initial %>
+    13:     <%= c.submit %>
+    14: <% end %>
+  
+app/views/climbers/new.html.erb:12:in `block in _app_views_climbers_new_html_erb__798975316069990901_70116644706640'
+app/views/climbers/new.html.erb:2:in `_app_views_climbers_new_html_erb__798975316069990901_70116644706640'
+app/controllers/climbers_controller.rb:15:in `new'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:40:10 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+     9:     <br>
+    10:     Country: <%= c.text_field :country %>
+    11:     </br>
+    12:     Mountain: <%= c.collection_check_boxes :mountain_ids, @mountains, :id, :name_with_initial do |b| %>
+    13:         <%= b.label { b.check_box + b.text } %>
+    14:         <% end %>
+    15:     <%= c.submit %>
+  
+app/views/climbers/new.html.erb:12:in `block in _app_views_climbers_new_html_erb__798975316069990901_70116653037400'
+app/views/climbers/new.html.erb:2:in `_app_views_climbers_new_html_erb__798975316069990901_70116653037400'
+app/controllers/climbers_controller.rb:15:in `new'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:40:10 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+     9:     <br>
+    10:     Country: <%= c.text_field :country %>
+    11:     </br>
+    12:     Mountain: <%= c.collection_check_boxes :mountain_ids, @mountains, :id, :name_with_initial do |b| %>
+    13:         <%= b.label { b.check_box + b.text } %>
+    14:         <% end %>
+    15:     <%= c.submit %>
+  
+app/views/climbers/new.html.erb:12:in `block in _app_views_climbers_new_html_erb__798975316069990901_70116644899820'
+app/views/climbers/new.html.erb:2:in `_app_views_climbers_new_html_erb__798975316069990901_70116644899820'
+app/controllers/climbers_controller.rb:15:in `new'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:40:29 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+     9:     <br>
+    10:     Country: <%= c.text_field :country %>
+    11:     </br>
+    12:     Mountain: <% c.collection_check_boxes :mountain_ids, @mountains, :id, :name_with_initial do |b| %>
+    13:         <%= b.label { b.check_box + b.text } %>
+    14:         <% end %>
+    15:     <%= c.submit %>
+  
+app/views/climbers/new.html.erb:12:in `block in _app_views_climbers_new_html_erb__798975316069990901_70116681177520'
+app/views/climbers/new.html.erb:2:in `_app_views_climbers_new_html_erb__798975316069990901_70116681177520'
+app/controllers/climbers_controller.rb:15:in `new'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:40:43 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ekowbuadu/Hikes/app/views/climbers/new.html.erb:12: syntax error, unexpected ',', expecting ')'
+...ion_check_boxes (:mountain_ids, @mountains, :id, :name_with_...
+...                              ^
+/Users/ekowbuadu/Hikes/app/views/climbers/new.html.erb:12: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...:mountain_ids, @mountains, :id, :name_with_initial) do |b| ;...
+...                              ^
+/Users/ekowbuadu/Hikes/app/views/climbers/new.html.erb:16: syntax error, unexpected end, expecting end-of-input
+'.freeze; end ;
+          ^~~):
+  
+app/views/climbers/new.html.erb:12: syntax error, unexpected ',', expecting ')'
+app/views/climbers/new.html.erb:12: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/climbers/new.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/controllers/climbers_controller.rb:15:in `new'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:41:03 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  Rendered climbers/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ekowbuadu/Hikes/app/views/climbers/new.html.erb:12: syntax error, unexpected ',', expecting ')'
+...ion_check_boxes (:mountain_ids, Mountain.all, :id, :name_wit...
+...                              ^
+/Users/ekowbuadu/Hikes/app/views/climbers/new.html.erb:12: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ountain_ids, Mountain.all, :id, :name_with_initial) do |b| ;...
+...                              ^
+/Users/ekowbuadu/Hikes/app/views/climbers/new.html.erb:16: syntax error, unexpected end, expecting end-of-input
+'.freeze; end ;
+          ^~~):
+  
+app/views/climbers/new.html.erb:12: syntax error, unexpected ',', expecting ')'
+app/views/climbers/new.html.erb:12: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/climbers/new.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/controllers/climbers_controller.rb:15:in `new'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:42:57 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.9ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:12
+  Rendered climbers/new.html.erb within layouts/application (126.5ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `mountain_ids' for #<Climber:0x00007f8a9b728530>
+Did you mean?  mountain_id
+               mountain_id=
+               mountain_id?
+               mountain_id_was):
+     9:     <br>
+    10:     Country: <%= c.text_field :country %>
+    11:     </br>
+    12:     Mountain: <% c.collection_check_boxes :mountain_ids, Mountain.all, :id, :name %>
+    13:     <%= c.submit %>
+    14: <% end %>
+  
+app/views/climbers/new.html.erb:12:in `block in _app_views_climbers_new_html_erb__798975316069990901_70116645115480'
+app/views/climbers/new.html.erb:2:in `_app_views_climbers_new_html_erb__798975316069990901_70116645115480'
+app/controllers/climbers_controller.rb:15:in `new'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:43:30 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:12
+  Rendered climbers/new.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `mountain_ids' for #<Climber:0x00007f8aa02af8a0>
+Did you mean?  mountain_id
+               mountain_id=
+               mountain_id?
+               mountain_id_was):
+     9:     <br>
+    10:     Country: <%= c.text_field :country %>
+    11:     </br>
+    12:     Mountain: <%= c.collection_check_boxes :mountain_ids, Mountain.all, :id, :name %>
+    13:     <%= c.submit %>
+    14: <% end %>
+  
+app/views/climbers/new.html.erb:12:in `block in _app_views_climbers_new_html_erb__798975316069990901_70116684689460'
+app/views/climbers/new.html.erb:2:in `_app_views_climbers_new_html_erb__798975316069990901_70116684689460'
+app/controllers/climbers_controller.rb:15:in `new'
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:43:48 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:12
+  Rendered climbers/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:44:09 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:13
+  Rendered climbers/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 14:44:35 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zbPvliNbMjkm/R1TUBvFec+mkL4pEPxUKQPNU439g9w7s5Z7a0KKNipS+957siqxsfPaeMxYYolO/owIrhLxow==", "climber"=>{"name"=>"Ekow", "age"=>"32", "country"=>"USA", "mountain_id"=>["", "1"]}, "commit"=>"Create Climber"}
+Unpermitted parameter: :mountain_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climbers/
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/climbers/" for ::1 at 2019-06-26 14:44:35 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.5ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/climbers/" for ::1 at 2019-06-26 14:44:38 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mClimber Load (1.4ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:46:20 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ekowbuadu/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:13
+  Rendered climbers/new.html.erb within layouts/application (112.3ms)
+Completed 200 OK in 330ms (Views: 310.9ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 14:46:26 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdA/pkuaeAegZSWgTFUbGON3ZX4xpBjTtvWv1LwUhwvH0EZLA4PACKzKwy1n/PTQnSIvuNTshg7RCO6Pn/v1dA==", "climber"=>{"name"=>"Ekow", "age"=>"32", "country"=>"USA", "mountain_id"=>[""]}, "commit"=>"Create Climber"}
+Unpermitted parameter: :mountain_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climber/
+Completed 302 Found in 21ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/climber/" for ::1 at 2019-06-26 14:46:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/climber"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/climber/" for ::1 at 2019-06-26 14:46:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/climber"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/climbers" for ::1 at 2019-06-26 14:46:51 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.4ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 32ms (Views: 26.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:46:57 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:13
+  Rendered climbers/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 46ms (Views: 36.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 14:47:01 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bAV58/0b/GGV3/hb+sTBXYGrJUbdtjryYeWdJXLeRfWaBQAetQJEbplwHtbRbS6V//5vgDj+pC8GGNx+UTE3ig==", "climber"=>{"name"=>"Ekow", "age"=>"32", "country"=>"USA", "mountain_id"=>["", "1"]}, "commit"=>"Create Climber"}
+Unpermitted parameter: :mountain_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climbers
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 14:47:01 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mClimber Load (0.6ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:48:25 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ekowbuadu/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:13
+  Rendered climbers/new.html.erb within layouts/application (122.6ms)
+Completed 200 OK in 369ms (Views: 349.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 14:48:30 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yYlQJuHj52wifMdqVGGF3DmKKhr0TGJJwnUBLX83Gxs/iSnLqfpfYy7TIed/yGoUR99g3BEE/JSliEB2XNhpZA==", "climber"=>{"name"=>"Ekow", "age"=>"32", "country"=>"USA", "mountain_id"=>["", "1"]}, "commit"=>"Create Climber"}
+Unpermitted parameter: :mountain_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climbers
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 14:48:30 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:51:04 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:13
+  Rendered climbers/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 14:51:11 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H9byu+/cZ3RbuSCZwZpXDXTKNBkFeuyjVITfwo9YYbXp1otWp8Xfe1cWxhTqM7jFCp9+3+Aycn4zeZ6ZrLcTyg==", "climber"=>{"name"=>"Ekow", "age"=>"32", "country"=>"USA", "mountain_id"=>"2"}, "commit"=>"Create Climber"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mClimber Create (1.1ms)[0m  [1m[32mINSERT INTO "climbers" ("name", "age", "country", "mountain_id") VALUES (?, ?, ?, ?)[0m  [["name", "Ekow"], ["age", 32], ["country", "USA"], ["mountain_id", 2]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climbers
+Completed 302 Found in 25ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 14:51:11 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.3ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/climbers/1" for ::1 at 2019-06-26 14:51:13 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.3ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: climber):
+  
+app/controllers/climbers_controller.rb:38:in `climber_params'
+app/controllers/climbers_controller.rb:21:in `show'
+Started GET "/climbers/1" for ::1 at 2019-06-26 14:52:49 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 39ms (Views: 27.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/climbers/1" for ::1 at 2019-06-26 14:53:12 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/climbers/1" for ::1 at 2019-06-26 14:53:19 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/climbers/1" for ::1 at 2019-06-26 14:53:32 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 14:53:38 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:13
+  Rendered climbers/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 14:53:57 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"69aqJWacc/89VkawzRInGVtyvwrDvCNKkGMa1/cG8Ugd1tPILoXL8DH5oD3mu8jRJSf1zCb0vZf3nluM1OmDNw==", "climber"=>{"name"=>"Dolittle", "age"=>"19", "country"=>"France", "mountain_id"=>"2"}, "commit"=>"Create Climber"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mClimber Create (0.7ms)[0m  [1m[32mINSERT INTO "climbers" ("name", "age", "country", "mountain_id") VALUES (?, ?, ?, ?)[0m  [["name", "Dolittle"], ["age", 19], ["country", "France"], ["mountain_id", 2]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climbers
+Completed 302 Found in 13ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 14:53:57 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.3ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/climbers/2" for ::1 at 2019-06-26 14:53:58 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains" for ::1 at 2019-06-26 14:54:05 -0400
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:3
+  Rendered mountains/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains/2" for ::1 at 2019-06-26 14:54:06 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 2]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 61ms (Views: 56.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains/2" for ::1 at 2019-06-26 14:56:18 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 2]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/edit" for ::1 at 2019-06-26 14:56:37 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Mountain with 'id'=edit):
+  
+app/controllers/mountains_controller.rb:9:in `show'
+Started GET "/climbers/1/edit" for ::1 at 2019-06-26 14:57:02 -0400
+Processing by ClimbersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:25
+  Rendering climbers/edit.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/edit.html.erb:13
+  Rendered climbers/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/climbers/1" for ::1 at 2019-06-26 14:57:11 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fk87QFpUjUVBrbBx3w/rCu+8ElXZyF8uT+S2y+3ZmZ/gT0KtEk01Sk0CVvz0pgTCkelYkzyAwfMoGfeQzjbr4A==", "climber"=>{"name"=>"Ekow", "age"=>"20", "country"=>"USA", "mountain_id"=>"2"}, "commit"=>"Update Climber", "id"=>"1"}
+  [1m[36mClimber Load (0.5ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:30
+Redirected to http://localhost:3000/climbers/1
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/climbers/1" for ::1 at 2019-06-26 14:57:11 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/climbers/1" for ::1 at 2019-06-26 14:57:41 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fk87QFpUjUVBrbBx3w/rCu+8ElXZyF8uT+S2y+3ZmZ/gT0KtEk01Sk0CVvz0pgTCkelYkzyAwfMoGfeQzjbr4A==", "climber"=>{"name"=>"Ekow", "age"=>"20", "country"=>"USA", "mountain_id"=>"2"}, "commit"=>"Update Climber", "id"=>"1"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:30
+Redirected to http://localhost:3000/climbers/1
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/climbers/1" for ::1 at 2019-06-26 14:57:41 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.6ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.8ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/climbers/1/edit" for ::1 at 2019-06-26 14:57:47 -0400
+Processing by ClimbersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.4ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:25
+  Rendering climbers/edit.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/edit.html.erb:13
+  Rendered climbers/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/climbers/1" for ::1 at 2019-06-26 14:57:53 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d83tjHl9ALMly14FoRdus43CNpVavgExvknS/k7NwhCBzZRhMWS4vClkuIiKvoF785d8U7/2n+zZtJOlbSKwbw==", "climber"=>{"name"=>"Lance", "age"=>"32", "country"=>"USA", "mountain_id"=>"2"}, "commit"=>"Update Climber", "id"=>"1"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:30
+Redirected to http://localhost:3000/climbers/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/climbers/1" for ::1 at 2019-06-26 14:57:53 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/climbers/1" for ::1 at 2019-06-26 14:58:27 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d83tjHl9ALMly14FoRdus43CNpVavgExvknS/k7NwhCBzZRhMWS4vClkuIiKvoF785d8U7/2n+zZtJOlbSKwbw==", "climber"=>{"name"=>"Lance", "age"=>"32", "country"=>"USA", "mountain_id"=>"2"}, "commit"=>"Update Climber", "id"=>"1"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:30
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/climbers_controller.rb:31:in `update'
+Started PATCH "/climbers/1" for ::1 at 2019-06-26 14:58:37 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d83tjHl9ALMly14FoRdus43CNpVavgExvknS/k7NwhCBzZRhMWS4vClkuIiKvoF785d8U7/2n+zZtJOlbSKwbw==", "climber"=>{"name"=>"Lance", "age"=>"32", "country"=>"USA", "mountain_id"=>"2"}, "commit"=>"Update Climber", "id"=>"1"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:31
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:31
+  [1m[36mClimber Update (0.5ms)[0m  [1m[33mUPDATE "climbers" SET "name" = ? WHERE "climbers"."id" = ?[0m  [["name", "Lance"], ["id", 1]]
+  ↳ app/controllers/climbers_controller.rb:31
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:31
+Redirected to http://localhost:3000/climbers/1
+Completed 302 Found in 22ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/climbers/1" for ::1 at 2019-06-26 14:58:37 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/climbers/1" for ::1 at 2019-06-26 14:59:38 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:19
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 35ms (Views: 23.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/mountains/2" for ::1 at 2019-06-26 14:59:39 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 2]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains" for ::1 at 2019-06-26 14:59:47 -0400
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:3
+  Rendered mountains/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mountains/2" for ::1 at 2019-06-26 14:59:48 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 2]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 15:06:40 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 15:06:44 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:18
+  Rendered climbers/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 15:06:56 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bRSQCxWthtchq848lSTSYtWG5GVJp4RmaL0XVymZNEqbFOnmXbQ+2C0EKLG+jT2qq9Ouo6zvGrsPQFYMCnZGNQ==", "climber"=>{"name"=>"Ekow", "age"=>"20", "country"=>"", "mountain_id"=>"1"}, "commit"=>"Create Climber"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mClimber Create (0.4ms)[0m  [1m[32mINSERT INTO "climbers" ("name", "age", "country", "mountain_id") VALUES (?, ?, ?, ?)[0m  [["name", "Ekow"], ["age", 20], ["country", ""], ["mountain_id", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climbers
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 15:06:56 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 15:08:01 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bRSQCxWthtchq848lSTSYtWG5GVJp4RmaL0XVymZNEqbFOnmXbQ+2C0EKLG+jT2qq9Ouo6zvGrsPQFYMCnZGNQ==", "climber"=>{"name"=>"Ekow", "age"=>"20", "country"=>"", "mountain_id"=>"1"}, "commit"=>"Create Climber"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mClimber Create (0.7ms)[0m  [1m[32mINSERT INTO "climbers" ("name", "age", "country", "mountain_id") VALUES (?, ?, ?, ?)[0m  [["name", "Ekow"], ["age", 20], ["country", ""], ["mountain_id", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climbers
+Completed 302 Found in 25ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 15:08:01 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.3ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 15:08:08 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bRSQCxWthtchq848lSTSYtWG5GVJp4RmaL0XVymZNEqbFOnmXbQ+2C0EKLG+jT2qq9Ouo6zvGrsPQFYMCnZGNQ==", "climber"=>{"name"=>"Ekow", "age"=>"20", "country"=>"", "mountain_id"=>"1"}, "commit"=>"Create Climber"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mClimber Create (0.5ms)[0m  [1m[32mINSERT INTO "climbers" ("name", "age", "country", "mountain_id") VALUES (?, ?, ?, ?)[0m  [["name", "Ekow"], ["age", 20], ["country", ""], ["mountain_id", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climbers
+Completed 302 Found in 21ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 15:08:08 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 15:10:00 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bRSQCxWthtchq848lSTSYtWG5GVJp4RmaL0XVymZNEqbFOnmXbQ+2C0EKLG+jT2qq9Ouo6zvGrsPQFYMCnZGNQ==", "climber"=>{"name"=>"Rid", "age"=>"20", "country"=>"", "mountain_id"=>"1"}, "commit"=>"Create Climber"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:19
+  Rendered climbers/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 41ms (Views: 18.1ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mClimber Load (0.9ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClimber Destroy (0.8ms)[0m  [1m[31mDELETE FROM "climbers" WHERE "climbers"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClimber Destroy (0.3ms)[0m  [1m[31mDELETE FROM "climbers" WHERE "climbers"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClimber Destroy (0.3ms)[0m  [1m[31mDELETE FROM "climbers" WHERE "climbers"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClimber Destroy (0.3ms)[0m  [1m[31mDELETE FROM "climbers" WHERE "climbers"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClimber Destroy (0.4ms)[0m  [1m[31mDELETE FROM "climbers" WHERE "climbers"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/climbers" for ::1 at 2019-06-26 15:10:36 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ekowbuadu/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 231ms (Views: 221.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 15:10:43 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:19
+  Rendered climbers/new.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 73ms (Views: 64.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 15:11:05 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1qSq6qJ1S4Ltk5F6Agk5BlQ+QU7Jw77aPqH5hH2+51ggpNMH6mzzjeE8d/cpoNbOKmsLiCyLIAdZXLjfXlGVJw==", "climber"=>{"name"=>"", "age"=>"", "country"=>"", "mountain_id"=>"1"}, "commit"=>"Create Climber"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:19
+  Rendered climbers/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 85ms (Views: 51.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 15:11:12 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UrAajRvsrMNsWfdgGhj+wAXV8Um8dWtbwz1VIuWsPWSksGNgU/UUzGD2Ee0xsREIe4C7j1k99YakwBR5xkNPGw==", "climber"=>{"name"=>"Ekow", "age"=>"32", "country"=>"USA", "mountain_id"=>"1"}, "commit"=>"Create Climber"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mClimber Create (0.7ms)[0m  [1m[32mINSERT INTO "climbers" ("name", "age", "country", "mountain_id") VALUES (?, ?, ?, ?)[0m  [["name", "Ekow"], ["age", 32], ["country", "USA"], ["mountain_id", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climbers
+Completed 302 Found in 28ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 15:11:12 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.6ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/climbers/6" for ::1 at 2019-06-26 15:11:14 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mClimber Load (1.3ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 15:11:54 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/climbers/6" for ::1 at 2019-06-26 15:11:56 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/1" for ::1 at 2019-06-26 15:11:59 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 1]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 15:12:13 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:19
+  Rendered climbers/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/climbers" for ::1 at 2019-06-26 15:12:29 -0400
+Processing by ClimbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z0rB/62d0KX/f+J8hHYKCDl5yG7/edAg2f0uYjRNNh85SrgS5YRoqvPQBPGv3+XARyyCqBoxTv2+AG85F6JEYA==", "climber"=>{"name"=>"Prince", "age"=>"1", "country"=>"USA", "mountain_id"=>"1"}, "commit"=>"Create Climber"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[36mClimber Create (0.4ms)[0m  [1m[32mINSERT INTO "climbers" ("name", "age", "country", "mountain_id") VALUES (?, ?, ?, ?)[0m  [["name", "Prince"], ["age", 1], ["country", "USA"], ["mountain_id", 1]]
+  ↳ app/controllers/climbers_controller.rb:9
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:9
+Redirected to http://localhost:3000/climbers
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 15:12:29 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/climbers/7" for ::1 at 2019-06-26 15:12:30 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/1" for ::1 at 2019-06-26 15:12:32 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 1]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/climbers/7/edit" for ::1 at 2019-06-26 15:12:46 -0400
+Processing by ClimbersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:30
+  Rendering climbers/edit.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/edit.html.erb:13
+  Rendered climbers/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/climbers/7" for ::1 at 2019-06-26 15:12:51 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G5ynwMjRSKzx4BQGdpVDTngyzinZjU0Sdfn3rYnDtFrtnN4tgMjwo/1P8otdPKyGBmeE7zzF088SBLb2qizGJQ==", "climber"=>{"name"=>"Prince", "age"=>"2", "country"=>"USA", "mountain_id"=>"1"}, "commit"=>"Update Climber", "id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[36mClimber Update (0.6ms)[0m  [1m[33mUPDATE "climbers" SET "age" = ? WHERE "climbers"."id" = ?[0m  [["age", 2], ["id", 7]]
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:36
+Redirected to http://localhost:3000/climbers/7
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/climbers/7" for ::1 at 2019-06-26 15:12:51 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/climbers/7" for ::1 at 2019-06-26 15:17:59 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/1" for ::1 at 2019-06-26 15:18:01 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (1.0ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 1]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/mountains/2" for ::1 at 2019-06-26 15:18:07 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 2]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains/edit" for ::1 at 2019-06-26 15:18:14 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Mountain with 'id'=edit):
+  
+app/controllers/mountains_controller.rb:9:in `show'
+Started GET "/mountains/1/edit" for ::1 at 2019-06-26 15:18:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/mountains/1/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/climbers" for ::1 at 2019-06-26 15:18:33 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/climbers/7" for ::1 at 2019-06-26 15:18:36 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains/1" for ::1 at 2019-06-26 15:18:37 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 1]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/climbers" for ::1 at 2019-06-26 15:18:45 -0400
+Processing by ClimbersController#index as HTML
+  Rendering climbers/index.html.erb within layouts/application
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers"[0m
+  ↳ app/views/climbers/index.html.erb:3
+  Rendered climbers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/climbers/new" for ::1 at 2019-06-26 15:18:49 -0400
+Processing by ClimbersController#new as HTML
+  Rendering climbers/new.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/new.html.erb:19
+  Rendered climbers/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/climbers/edit" for ::1 at 2019-06-26 15:18:55 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Climber with 'id'=edit):
+  
+app/controllers/climbers_controller.rb:24:in `show'
+Started GET "/climbers/7/edit" for ::1 at 2019-06-26 15:19:01 -0400
+Processing by ClimbersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:30
+  Rendering climbers/edit.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/edit.html.erb:13
+  Rendered climbers/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/climbers/7" for ::1 at 2019-06-26 15:20:55 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6rH8/P21owerF6rYqhsADV3DGrB2TH2Gr9xg0TKrRxEcsYURtawbCKe4TFWBsu/FI5ZQdpME41vIISGKEUQ1bg==", "climber"=>{"name"=>"Prince", "age"=>"", "country"=>"USA", "mountain_id"=>"1"}, "commit"=>"Update Climber", "id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:35
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:37
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/climbers_controller.rb:37
+Redirected to http://localhost:3000/climbers/7
+Completed 302 Found in 21ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/climbers/7" for ::1 at 2019-06-26 15:20:55 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/climbers/7" for ::1 at 2019-06-26 15:22:21 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ekowbuadu/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 286ms (Views: 259.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/climbers/7/edit" for ::1 at 2019-06-26 15:22:26 -0400
+Processing by ClimbersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:30
+  Rendering climbers/edit.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/edit.html.erb:19
+  Rendered climbers/edit.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/climbers/7" for ::1 at 2019-06-26 15:22:29 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"icygFZfqD6eIUA+6sTuotZ72qdb8eKx/C3mFMBBINp5/zNn43/O3qIT/6Teakkd94KPjEBkwMqJshMRrM6dE4Q==", "climber"=>{"name"=>"Prince", "age"=>"", "country"=>"USA", "mountain_id"=>"1"}, "commit"=>"Update Climber", "id"=>"7"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:35
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/climbers_controller.rb:37
+Redirected to http://localhost:3000/climbers/7
+Completed 302 Found in 12ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/climbers/7" for ::1 at 2019-06-26 15:22:29 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.3ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/climbers/7" for ::1 at 2019-06-26 15:23:10 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"icygFZfqD6eIUA+6sTuotZ72qdb8eKx/C3mFMBBINp5/zNn43/O3qIT/6Teakkd94KPjEBkwMqJshMRrM6dE4Q==", "climber"=>{"name"=>"Prince", "age"=>"", "country"=>"USA", "mountain_id"=>"1"}, "commit"=>"Update Climber", "id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/climbers_controller.rb:36
+  Rendering climbers/edit.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/edit.html.erb:19
+  Rendered climbers/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 40ms (Views: 16.8ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/climbers/7" for ::1 at 2019-06-26 15:23:59 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TM1fiG2m07GJogYKv5E5ad2L+wSilLvYGPDSXs99hZq6zSZlJb9rvoUN4IeUONaho96xwkfcJQV/DZMF7JL35Q==", "climber"=>{"name"=>"", "age"=>"2", "country"=>"USA", "mountain_id"=>"1"}, "commit"=>"Update Climber", "id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/climbers_controller.rb:36
+  Rendering climbers/edit.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/edit.html.erb:19
+  Rendered climbers/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 35ms (Views: 29.3ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/climbers/7" for ::1 at 2019-06-26 15:24:03 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LINToswfQbBDulKKG2tJS/OVnAljm5ZndhHoL20I3OHagypPhAb5v08VtAcwwqaDjcDWz4bTCLoR7Kl0Tueung==", "climber"=>{"name"=>"Prince", "age"=>"2", "country"=>"USA", "mountain_id"=>"1"}, "commit"=>"Update Climber", "id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:36
+Redirected to http://localhost:3000/climbers/7
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/climbers/7" for ::1 at 2019-06-26 15:24:03 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/climbers/7/edit" for ::1 at 2019-06-26 15:24:12 -0400
+Processing by ClimbersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:30
+  Rendering climbers/edit.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/climbers/edit.html.erb:19
+  Rendered climbers/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/climbers/7" for ::1 at 2019-06-26 15:24:17 -0400
+Processing by ClimbersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hYTmiQ5Udex0t2bmLkj/A5dUHEFnFirWDDNw6FRgT6VzhJ9kRk3N43gYgGsF4RDL6QFWh4JetAtrzjGzd4892g==", "climber"=>{"name"=>"Prince1", "age"=>"2", "country"=>"USA", "mountain_id"=>"1"}, "commit"=>"Update Climber", "id"=>"7"}
+  [1m[36mClimber Load (0.1ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:35
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[36mClimber Update (0.5ms)[0m  [1m[33mUPDATE "climbers" SET "name" = ? WHERE "climbers"."id" = ?[0m  [["name", "Prince1"], ["id", 7]]
+  ↳ app/controllers/climbers_controller.rb:36
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/climbers_controller.rb:36
+Redirected to http://localhost:3000/climbers/7
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/climbers/7" for ::1 at 2019-06-26 15:24:17 -0400
+Processing by ClimbersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClimber Load (0.2ms)[0m  [1m[34mSELECT  "climbers".* FROM "climbers" WHERE "climbers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/climbers_controller.rb:24
+  Rendering climbers/show.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/climbers/show.html.erb:5
+  Rendered climbers/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/1" for ::1 at 2019-06-26 15:24:21 -0400
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:9
+  Rendering mountains/show.html.erb within layouts/application
+  [1m[36mClimber Load (0.3ms)[0m  [1m[34mSELECT "climbers".* FROM "climbers" WHERE "climbers"."mountain_id" = ?[0m  [["mountain_id", 1]]
+  ↳ app/views/mountains/show.html.erb:7
+  Rendered mountains/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
